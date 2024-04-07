@@ -1,7 +1,7 @@
 //import { Fragment } from "react";
 import { useMemo } from "react";
 
-export default function Header({cart, removeFromCart, increaseQuantity,decreaseQuantity, clearCart}) {
+export default function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart}) {
 
     //State Derivado
     const isEmpty = useMemo( () => cart.length === 0, [cart])

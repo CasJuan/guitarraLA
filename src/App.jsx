@@ -96,7 +96,7 @@ function App() {
         cart={cart}
         removeFromCart = {removeFromCart}
         increaseQuantity = {increaseQuantity}
-        decremtQuantity = { decreaseQuantity}
+        decreaseQuantity = { decreaseQuantity}
         clearCart = {clearCart}
     />
     
