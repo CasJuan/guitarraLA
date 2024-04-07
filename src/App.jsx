@@ -21,6 +21,21 @@ function App() {
 
     const [cart, setCart] = useState([]);
 
+    function addToCart (item) {
+
+        const itemExists = cart.findIndex((guitar) => guitar.id === item.id);
+        if(itemExists >= 0){
+            const updateCart = [...cart]
+            updateCart[itemExists].quantity++
+            setCart(updateCart)
+        }else{
+            item.quantity = 1
+            setCart( [...cart, item])
+
+        }
+
+    }
+
     /* 
     PARA CONSUMO DE API
     useEffect (() => {
@@ -42,6 +57,7 @@ function App() {
                         guitar={guitar}
                         cart = {cart}
                         setCart = {setCart}
+                        addToCart = {addToCart}
                     />
                 ))
             }
