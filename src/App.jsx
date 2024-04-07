@@ -19,6 +19,8 @@ function App() {
 
     const [data,setData] = useState(db);
 
+    const [cart, setCart] = useState([]);
+
     /* 
     PARA CONSUMO DE API
     useEffect (() => {
@@ -38,6 +40,8 @@ function App() {
                     <Guitar
                         key={guitar.id}
                         guitar={guitar}
+                        cart = {cart}
+                        setCart = {setCart}
                     />
                 ))
             }
