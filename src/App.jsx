@@ -34,7 +34,11 @@ function App() {
         }
     }
 
-    
+    function removeFromCart (id){
+        setCart(prevCart => prevCart.filter(guitar => guitar.id !== id))
+    }
+
+
 
     /* 
     PARA CONSUMO DE API
@@ -47,6 +51,7 @@ function App() {
 
     <Header
         cart={cart}
+        removeFromCart = {removeFromCart}
     />
     
     <main className="container-xl mt-5">
