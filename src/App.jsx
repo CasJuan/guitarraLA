@@ -69,6 +69,11 @@ function App() {
         setCart(updateCart)
     }
 
+    function clearCart ()  {
+        setCart([]);
+    }
+    
+
 
 
     /* 
@@ -85,6 +90,7 @@ function App() {
         removeFromCart = {removeFromCart}
         increaseQuantity = {increaseQuantity}
         decremtQuantity = { decreaseQuantity}
+        clearCart = {clearCart}
     />
     
     <main className="container-xl mt-5">
